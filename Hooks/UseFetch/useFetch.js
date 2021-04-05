@@ -37,6 +37,14 @@ const useFetch = (url) => {
                 }
                 
             })
+            
+            .catch(() => {
+                setState({
+                    data: null,
+                    loading: false,
+                    error: 'No se obtuvo la data'
+                })
+            })
         
     }, [url])
     
